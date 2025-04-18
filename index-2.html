@@ -792,78 +792,75 @@
             
 
                 <!-- Enquiry Form -->
-                <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 pt-16 md:pt-20" style="display: flex !important; flex-direction: column !important;">
-    <div @click.away="open = false" class="relative bg-black rounded-2xl shadow-xl max-h-[90vh] overflow-y-auto" style="display: flex !important; flex-direction: column !important; width: 90% !important; max-width: 26rem !important; margin-top: 2rem !important; border: 1px solid rgba(226, 22, 22, 0.2) !important;">
-        
-        <!-- Close button -->
-        <button @click="open = false" class="absolute top-4 right-4 text-gray-400 hover:text-white z-10">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-        </button>
-        
-        <!-- Logo Section -->
-        <div class="flex justify-center pt-8 pb-4" style="display: flex !important; justify-content: center !important;">
-            <div class="h-16 w-32 bg-blue-700 rounded-full flex items-center justify-center" style="background-color:  #ffffff !important;">
-                <span class="text-xl font-bold text-blue-100" style="color: rgb(219, 234, 254) !important;">LOGO</span>
-            </div>
-        </div>
-        
-        <!-- Form Header -->    
-        <div class="text-center px-4" style="text-align: center !important; padding-left: 1rem !important; padding-right: 1rem !important;">
-            <h2 class="text-2xl font-bold text-white" style="margin-top: 0.5rem !important; margin-bottom: 0.25rem !important;">Get In Touch</h2>
-            <p class="text-gray-400 text-sm mb-6" style="color: rgb(156, 163, 175) !important;">Complete the form below and we'll contact you shortly</p>
-        </div>
-        
-        <!-- Form -->
-        <form class="rounded-2xl" style="display: block !important; width: 100% !important; padding: 2rem !important; background-color: #ffffff !important; box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;">
-            <div style="margin-bottom: 1.25rem !important;">
-              <label for="fullName" style="display: block !important; margin-bottom: 0.5rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.875rem !important;">Full Name</label>
-              <input 
-                type="text" 
-                id="fullName" 
-                placeholder="Enter your full name"
-                style="display: block !important; width: 100% !important; padding: 0.75rem 1rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.75rem !important; font-size: 0.875rem !important; background-color: #f8fafc !important; color: #0f172a !important;"
-              >
-            </div>
-          
-            <div style="margin-bottom: 1.25rem !important;">
-              <label for="email" style="display: block !important; margin-bottom: 0.5rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.875rem !important;">Email Address</label>
-              <input 
-                type="email" 
-                id="email" 
-                placeholder="you@example.com"
-                style="display: block !important; width: 100% !important; padding: 0.75rem 1rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.75rem !important; font-size: 0.875rem !important; background-color: #f8fafc !important; color: #0f172a !important;"
-              >
-            </div>
-          
-            <div style="margin-bottom: 1.5rem !important;">
-              <label for="phone" style="display: block !important; margin-bottom: 0.5rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.875rem !important;">Contact Number</label>
-              <input 
-                type="tel" 
-                id="phone" 
-                placeholder="(123) 456-7890"
-                style="display: block !important; width: 100% !important; padding: 0.75rem 1rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.75rem !important; font-size: 0.875rem !important; background-color: #f8fafc !important; color: #0f172a !important;"
-              >
-            </div>
-          
-            <div style="margin-top: 1.5rem !important;">
-              <button 
-                type="submit" 
-                style="display: block !important; width: 100% !important; padding: 0.875rem !important; background: linear-gradient(to right, #3b82f6, #60a5fa) !important; color: white !important; font-weight: 600 !important; border-radius: 0.75rem !important; transition: background 0.3s ease-in-out !important; font-size: 0.875rem !important; border: none;"
-              >
-                Submit Request
-              </button>
-            </div>
-          
-            <p style="text-align: center !important; color: #64748b !important; font-size: 0.75rem !important; margin-top: 1.25rem !important;">
-              We respect your privacy and will not share your information.
-            </p>
-          </form>
-          
-    </div>
-</div>
-
+                <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center p-4" style="display: flex !important; flex-direction: column !important; background-color: rgba(255, 255, 255, 0.5) !important;">
+                    <div @click.away="open = false" class="relative max-h-[80vh] overflow-y-auto" style="display: flex !important; flex-direction: column !important; width: 90% !important; max-width: 18rem !important;">
+                        <!-- Close button -->
+                        <button @click="open = false" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        
+                        <!-- Logo Section -->
+                        <div class="flex justify-center pt-3 pb-1" style="display: flex !important; justify-content: center !important; background-color: #e6f2ff !important;">
+                            <div class="h-10 w-20 flex items-center justify-center" style="background-color: #ffffff !important; border-radius: 4px !important;">
+                                <span class="text-lg font-bold" style="color: rgb(59, 130, 246) !important;">LOGO</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Form Header -->    
+                        <div class="text-center px-4" style="text-align: center !important; padding-left: 1rem !important; padding-right: 1rem !important; background-color: #e6f2ff !important;">
+                            <h2 class="text-xl font-bold" style="margin-top: 0 !important; margin-bottom: 0.25rem !important; color: #333333 !important;">Get In Touch</h2>
+                            <p class="text-xs mb-2" style="color: rgb(107, 114, 128) !important;">Complete the form below and we'll contact you shortly</p>
+                        </div>
+                        
+                        <!-- Form -->
+                        <form class="rounded-b-xl" style="display: block !important; width: 100% !important; padding: 1rem !important; background-color: #e6f2ff !important; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;">
+                            <div style="margin-bottom: 0.5rem !important;">
+                              <label for="fullName" style="display: block !important; margin-bottom: 0.25rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.75rem !important;">Full Name</label>
+                              <input 
+                                type="text" 
+                                id="fullName" 
+                                placeholder="Enter your full name"
+                                style="display: block !important; width: 100% !important; padding: 0.5rem 0.75rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.5rem !important; font-size: 0.75rem !important; background-color: #ffffff !important; color: #0f172a !important;"
+                              >
+                            </div>
+                          
+                            <div style="margin-bottom: 0.5rem !important;">
+                              <label for="email" style="display: block !important; margin-bottom: 0.25rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.75rem !important;">Email Address</label>
+                              <input 
+                                type="email" 
+                                id="email" 
+                                placeholder="you@example.com"
+                                style="display: block !important; width: 100% !important; padding: 0.5rem 0.75rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.5rem !important; font-size: 0.75rem !important; background-color: #ffffff !important; color: #0f172a !important;"
+                              >
+                            </div>
+                          
+                            <div style="margin-bottom: 0.75rem !important;">
+                              <label for="phone" style="display: block !important; margin-bottom: 0.25rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.75rem !important;">Contact Number</label>
+                              <input 
+                                type="tel" 
+                                id="phone" 
+                                placeholder="(123) 456-7890"
+                                style="display: block !important; width: 100% !important; padding: 0.5rem 0.75rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.5rem !important; font-size: 0.75rem !important; background-color: #ffffff !important; color: #0f172a !important;"
+                              >
+                            </div>
+                          
+                            <div style="margin-top: 0.75rem !important;">
+                              <button 
+                                type="submit" 
+                                style="display: block !important; width: 100% !important; padding: 0.625rem !important; background-color: #000000 !important; color: white !important; font-weight: 600 !important; border-radius: 0.5rem !important; transition: background 0.3s ease-in-out !important; font-size: 0.75rem !important; border: none;"
+                              >
+                                Submit Request
+                              </button>
+                            </div>
+                          
+                            <p style="text-align: center !important; color: #64748b !important; font-size: 0.7rem !important; margin-top: 0.5rem !important;">
+                              We respect your privacy and will not share your information.
+                            </p>
+                        </form>
+                    </div>
+                </div>  
             
                     </div>
                     </div>
