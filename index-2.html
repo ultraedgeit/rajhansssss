@@ -10,7 +10,7 @@
     <meta name="AdsBot-Google" content="noindex follow" />
     <meta name="description" content="Bery-Real Estate Listing Template">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script> -->
 
 
     <!-- Favicon -->
@@ -792,75 +792,78 @@
             
 
                 <!-- Enquiry Form -->
+              
                 <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center p-4" style="display: flex !important; flex-direction: column !important; background-color: rgba(255, 255, 255, 0.5) !important;">
-                    <div @click.away="open = false" class="relative max-h-[80vh] overflow-y-auto" style="display: flex !important; flex-direction: column !important; width: 90% !important; max-width: 18rem !important;">
-                        <!-- Close button -->
-                        <button @click="open = false" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 z-10">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                        
-                        <!-- Logo Section -->
-                        <div class="flex justify-center pt-3 pb-1" style="display: flex !important; justify-content: center !important; background-color: #e6f2ff !important;">
-                            <div class="h-10 w-20 flex items-center justify-center" style="background-color: #ffffff !important; border-radius: 4px !important;">
-                                <span class="text-lg font-bold" style="color: rgb(59, 130, 246) !important;">LOGO</span>
-                            </div>
+                    <div @click.away="open = false" class="relative max-h-[80vh] overflow-y-auto" style="display: flex !important; flex-direction: column !important; width: 90% !important; max-width: 22rem !important; border-radius: 1rem !important; overflow: hidden !important;">
+                      <!-- Close button -->
+                      <button @click="open = false" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                      </button>
+                      
+                      <!-- Logo Section -->
+                      <div class="flex justify-center pt-3 pb-1" style="display: flex !important; justify-content: center !important; background-color: #e6f2ff !important; border-top-left-radius: 1rem !important; border-top-right-radius: 1rem !important;">
+                        <div class="flex items-center justify-center gap-2" style="background-color: #ffffff !important; border-radius: 8px !important; padding: 0.5rem 1rem !important; width: auto !important;">
+                          <img src="assets/images/logo/blossom_logo.jpg" alt="Blossom Logo" style="max-height: 2rem !important; max-width: 100% !important; object-fit: contain !important;">
+                          <span style="color: #6b7280 !important; font-size: 1rem !important;">|</span>
+                          <img src="assets/images/logo/Rajhans-logo-main.png" alt="Rajhans Logo" style="max-height: 2rem !important; max-width: 100% !important; object-fit: contain !important;">
                         </div>
-                        
-                        <!-- Form Header -->    
-                        <div class="text-center px-4" style="text-align: center !important; padding-left: 1rem !important; padding-right: 1rem !important; background-color: #e6f2ff !important;">
-                            <h2 class="text-xl font-bold" style="margin-top: 0 !important; margin-bottom: 0.25rem !important; color: #333333 !important;">Get In Touch</h2>
-                            <p class="text-xs mb-2" style="color: rgb(107, 114, 128) !important;">Complete the form below and we'll contact you shortly</p>
+                      </div>
+                      
+                      <!-- Form Header -->    
+                      <div class="text-center px-4" style="text-align: center !important; padding-left: 1rem !important; padding-right: 1rem !important; background-color: #e6f2ff !important;">
+                        <h2 class="text-xl font-bold" style="margin-top: 0 !important; margin-bottom: 0.25rem !important; color: #333333 !important;">Get In Touch</h2>
+                        <p class="text-xs mb-2" style="color: rgb(107, 114, 128) !important;">Complete the form below and we'll contact you shortly</p>
+                      </div>
+                      
+                      <!-- Form -->
+                      <form class="rounded-b-xl" style="display: block !important; width: 100% !important; padding: 1.25rem !important; background-color: #e6f2ff !important; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important; border-bottom-left-radius: 1rem !important; border-bottom-right-radius: 1rem !important;">
+                        <div style="margin-bottom: 0.75rem !important;">
+                          <label for="fullName" style="display: block !important; margin-bottom: 0.25rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.75rem !important;">Full Name</label>
+                          <input 
+                            type="text" 
+                            id="fullName" 
+                            placeholder="Enter your full name"
+                            style="display: block !important; width: 100% !important; padding: 0.625rem 0.75rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.75rem !important; font-size: 0.75rem !important; background-color: #ffffff !important; color: #0f172a !important;"
+                          >
                         </div>
-                        
-                        <!-- Form -->
-                        <form class="rounded-b-xl" style="display: block !important; width: 100% !important; padding: 1rem !important; background-color: #e6f2ff !important; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;">
-                            <div style="margin-bottom: 0.5rem !important;">
-                              <label for="fullName" style="display: block !important; margin-bottom: 0.25rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.75rem !important;">Full Name</label>
-                              <input 
-                                type="text" 
-                                id="fullName" 
-                                placeholder="Enter your full name"
-                                style="display: block !important; width: 100% !important; padding: 0.5rem 0.75rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.5rem !important; font-size: 0.75rem !important; background-color: #ffffff !important; color: #0f172a !important;"
-                              >
-                            </div>
-                          
-                            <div style="margin-bottom: 0.5rem !important;">
-                              <label for="email" style="display: block !important; margin-bottom: 0.25rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.75rem !important;">Email Address</label>
-                              <input 
-                                type="email" 
-                                id="email" 
-                                placeholder="you@example.com"
-                                style="display: block !important; width: 100% !important; padding: 0.5rem 0.75rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.5rem !important; font-size: 0.75rem !important; background-color: #ffffff !important; color: #0f172a !important;"
-                              >
-                            </div>
-                          
-                            <div style="margin-bottom: 0.75rem !important;">
-                              <label for="phone" style="display: block !important; margin-bottom: 0.25rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.75rem !important;">Contact Number</label>
-                              <input 
-                                type="tel" 
-                                id="phone" 
-                                placeholder="(123) 456-7890"
-                                style="display: block !important; width: 100% !important; padding: 0.5rem 0.75rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.5rem !important; font-size: 0.75rem !important; background-color: #ffffff !important; color: #0f172a !important;"
-                              >
-                            </div>
-                          
-                            <div style="margin-top: 0.75rem !important;">
-                              <button 
-                                type="submit" 
-                                style="display: block !important; width: 100% !important; padding: 0.625rem !important; background-color: #000000 !important; color: white !important; font-weight: 600 !important; border-radius: 0.5rem !important; transition: background 0.3s ease-in-out !important; font-size: 0.75rem !important; border: none;"
-                              >
-                                Submit Request
-                              </button>
-                            </div>
-                          
-                            <p style="text-align: center !important; color: #64748b !important; font-size: 0.7rem !important; margin-top: 0.5rem !important;">
-                              We respect your privacy and will not share your information.
-                            </p>
-                        </form>
+                      
+                        <div style="margin-bottom: 0.75rem !important;">
+                          <label for="email" style="display: block !important; margin-bottom: 0.25rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.75rem !important;">Email Address</label>
+                          <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="you@example.com"
+                            style="display: block !important; width: 100% !important; padding: 0.625rem 0.75rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.75rem !important; font-size: 0.75rem !important; background-color: #ffffff !important; color: #0f172a !important;"
+                          >
+                        </div>
+                      
+                        <div style="margin-bottom: 1rem !important;">
+                          <label for="phone" style="display: block !important; margin-bottom: 0.25rem !important; font-weight: 600 !important; color: #1e293b !important; font-size: 0.75rem !important;">Contact Number</label>
+                          <input 
+                            type="tel" 
+                            id="phone" 
+                            placeholder="(123) 456-7890"
+                            style="display: block !important; width: 100% !important; padding: 0.625rem 0.75rem !important; border: 1px solid #cbd5e1 !important; border-radius: 0.75rem !important; font-size: 0.75rem !important; background-color: #ffffff !important; color: #0f172a !important;"
+                          >
+                        </div>
+                      
+                        <div style="margin-top: 1rem !important;">
+                          <button 
+                            type="submit" 
+                            style="display: block !important; width: 100% !important; padding: 0.75rem !important; background-color: #000000 !important; color: white !important; font-weight: 600 !important; border-radius: 0.75rem !important; transition: background 0.3s ease-in-out !important; font-size: 0.75rem !important; border: none;"
+                          >
+                            Submit Request
+                          </button>
+                        </div>
+                      
+                        <p style="text-align: center !important; color: #64748b !important; font-size: 0.7rem !important; margin-top: 0.75rem !important;">
+                          We respect your privacy and will not share your information.
+                        </p>
+                      </form>
                     </div>
-                </div>  
+                  </div>     
             
                     </div>
                     </div>
@@ -883,84 +886,95 @@
         <br>
      
         <!-- Blog Section Start  -->
-        <section class="blog-section py-[80px] lg:py-[120px]">
-            <div class="container">
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+        
+
+        <section x-data="{ open: false }" class="blog-section py-[80px] lg:py-[120px]">
+            <div class="container mx-auto px-4">
                 <div class="mb-[30px] lg:mb-[60px] text-center">
-                    <h2 class="font-lora text-primary text-[24px] sm:text-[30px] xl:text-xl capitalize font-medium">Floor Plans
-                      <span class="text-secondary"></span></h2>
+                    <h2 class="font-lora text-primary text-[24px] sm:text-[30px] xl:text-xl capitalize font-medium">
+                        Floor Plans <span class="text-secondary"></span>
+                    </h2>
                 </div>
+        
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[40px]">
-                    <div class="post-item">
-                        <a href="blog-details.html" class="block overflow-hidden rounded-[6px] mb-[35px] relative">
-                            <img class="w-full h-full" src="assets/images/floors/floor2.png" width="370" height="270" loading="lazy" alt="Importance of Build quality of modern Real Estate." style="filter: blur(4px);">
-                            <!-- View More Button -->
-                             <button @click="open = true" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-secondary text-white px-4 py-2 text-sm rounded-full shadow-md hover:bg-white hover:text-secondary font-medium transition-all duration-300">
+        
+                    <!-- Repeatable Floor Plan Card -->
+                    <template x-for="i in 6" :key="i">
+                        <div class="relative rounded-[6px] overflow-hidden">
+                            <img class="w-full h-full" src="assets/images/floors/floor2.png" width="370" height="270" loading="lazy" alt="Floor Plan" style="filter: blur(4px);">
+                            <button @click="open = true"
+                                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-secondary text-white px-4 py-2 text-sm rounded-full shadow-md hover:bg-white hover:text-secondary font-medium transition-all duration-300">
                                 Play
                             </button>
-                        </a>
-                        <div>
-                            <!-- <span class="block leading-none font-normal text-[14px] text-secondary mb-[10px]">James Alber on 22 December, 21</span> -->
-                            <!-- <h3><a href="blog-details.html" class="font-lora text-[22px] xl:text-[24px] leading-[1.285] text-primary block mb-[10px] hover:text-secondary transition-all font-medium">Tip’s about Real Estate Recent Conditions from Agent.</a></h3> -->
-                            <!-- <p class="font-light text-[#494949] text-[16px] leading-[1.75]">Properties are most budget friendly so you have are opportunity to find are the best the best...</p> -->
                         </div>
-                    </div>
-                    
-                    <div class="post-item">
-                        <a href="blog-details.html" class="block overflow-hidden rounded-[6px] mb-[35px]">
-                            <img class="w-full h-full" src="assets/images/floors/floor2.png" width="370" height="270" loading="lazy" alt="Importance of Build quality of modern Real Estate." style="filter: blur(4px);">
-                        </a>
-                        <div>
-                            <!-- <span class="block leading-none font-normal text-[14px] text-secondary mb-[10px]">Shohel Gyes on 21 December, 22</span> -->
-                            <!-- <h3><a href="blog-details.html" class="font-lora text-[22px] xl:text-[24px] leading-[1.285] text-primary block mb-[10px] hover:text-secondary transition-all font-medium">Importance of Build quality of modern Real Estate.</a></h3> -->
-                            <!-- <p class="font-light text-[#494949] text-[16px] leading-[1.75]">Properties are most budget friendly so you have are opportunity to find are the best the best...</p> -->
-                        </div>
-                    </div>
-                    <div class="post-item">
-                        <a href="blog-details.html" class="block overflow-hidden rounded-[6px] mb-[35px]">
-                            <img class="w-full h-full" src="assets/images/floors/floor2.png" width="370" height="270" loading="lazy" alt="Importance of Build quality of modern Real Estate." style="filter: blur(4px);">
-                        </a>
-                        <div>
-                            <!-- <span class="block leading-none font-normal text-[14px] text-secondary mb-[10px]">Ethan Patel on 19 December, 21</span> -->
-                            <!-- <h3><a href="blog-details.html" class="font-lora text-[22px] xl:text-[24px] leading-[1.285] text-primary block mb-[10px] hover:text-secondary transition-all font-medium">Most Popular Real Estae area you can choose from.</a></h3> -->
-                            <!-- <p class="font-light text-[#494949] text-[16px] leading-[1.75]">Properties are most budget friendly so you have are opportunity to find are the best the best...</p> -->
-                        </div>
-                    </div>
-                    <div class="post-item">
-                        <a href="blog-details.html" class="block overflow-hidden rounded-[6px] mb-[35px]">
-                            <img class="w-full h-full" src="assets/images/floors/floor2.png" width="370" height="270" loading="lazy" alt="Importance of Build quality of modern Real Estate." style="filter: blur(4px);">
-                        </a>
-                        <div>
-                            <!-- <span class="block leading-none font-normal text-[14px] text-secondary mb-[10px]">Harshel Gibs on 17 December, 21</span> -->
-                            <!-- <h3><a href="blog-details.html" class="font-lora text-[22px] xl:text-[24px] leading-[1.285] text-primary block mb-[10px] hover:text-secondary transition-all font-medium">The Home Buying Process: A Comprehensive Guide.</a></h3> -->
-                            <!-- <p class="font-light text-[#494949] text-[16px] leading-[1.75]">Properties are most budget friendly so you have are opportunity to find are the best the best...</p> -->
-                        </div>
-                    </div>
-                    <div class="post-item">
-                        <a href="blog-details.html" class="block overflow-hidden rounded-[6px] mb-[35px]">
-                            <img class="w-full h-full" src="assets/images/floors/floor2.png" width="370" height="270" loading="lazy" alt="Importance of Build quality of modern Real Estate." style="filter: blur(4px);">
-                        </a>
-                        <div>
-                            <!-- <span class="block leading-none font-normal text-[14px] text-secondary mb-[10px]">Garry Sobers on 15 December, 21</span> -->
-                            <!-- <h3><a href="blog-details.html" class="font-lora text-[22px] xl:text-[24px] leading-[1.285] text-primary block mb-[10px] hover:text-secondary transition-all font-medium">The Best Types Of Real Estate Investments information.</a></h3> -->
-                            <!-- <p class="font-light text-[#494949] text-[16px] leading-[1.75]">Properties are most budget friendly so you have are opportunity to find are the best the best...</p> -->
-                        </div>
-                    </div>
-                    <div class="post-item">
-                        <a href="blog-details.html" class="block overflow-hidden rounded-[6px] mb-[35px]">
-                            <img class="w-full h-full" src="assets/images/floors/floor2.png" width="370" height="270" loading="lazy" alt="Importance of Build quality of modern Real Estate." style="filter: blur(4px);">
-                        </a>
-                        <div>
-                            <!-- <span class="block leading-none font-normal text-[14px] text-secondary mb-[10px]">Shane Watson on 10 December, 21</span> -->
-                            <!-- <h3><a href="blog-details.html" class="font-lora text-[22px] xl:text-[24px] leading-[1.285] text-primary block mb-[10px] hover:text-secondary transition-all font-medium">How Much Does Land Survey Cost in 2022?.</a></h3> -->
-                            <!-- <p class="font-light text-[#494949] text-[16px] leading-[1.75]">Properties are most budget friendly so you have are opportunity to find are the best the best...</p> -->
-                        </div>
-                    </div>
-                   
-
+                    </template>
+        
                 </div>
-              
+            </div>
+        
+            <!-- Popup Form -->
+            <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
+                <div @click.away="open = false" class="relative max-h-[80vh] overflow-y-auto flex flex-col w-full max-w-[22rem] rounded-xl overflow-hidden">
+                    
+                    <!-- Close button -->
+                    <button @click="open = false" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+        
+                    <!-- Logo Section -->
+                    <div class="flex justify-center pt-3 pb-1 bg-[#e6f2ff] rounded-t-xl">
+                        <div class="flex items-center justify-center gap-2 bg-white rounded-lg py-2 px-4">
+                            <img src="assets/images/logo/blossom_logo.jpg" alt="Blossom Logo" class="max-h-8 object-contain">
+                            <span class="text-gray-500">|</span>
+                            <img src="assets/images/logo/Rajhans-logo-main.png" alt="Rajhans Logo" class="max-h-8 object-contain">
+                        </div>
+                    </div>
+        
+                    <!-- Form Header -->
+                    <div class="text-center px-4 bg-[#e6f2ff]">
+                        <h2 class="text-xl font-bold text-gray-800 mb-1">Get In Touch</h2>
+                        <p class="text-xs text-gray-500 mb-2">Complete the form below and we'll contact you shortly</p>
+                    </div>
+        
+                    <!-- Form -->
+                    <form class="rounded-b-xl w-full p-4 bg-[#e6f2ff] shadow-xl border-b-2 border-t-2 border-gray-300">
+                        <div class="mb-3">
+                            <label for="fullName" class="block text-sm font-semibold text-gray-800 mb-1">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+        
+                        <div class="mb-3">
+                            <label for="email" class="block text-sm font-semibold text-gray-800 mb-1">Email Address</label>
+                            <input type="email" id="email" placeholder="you@example.com"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+        
+                        <div class="mb-4">
+                            <label for="phone" class="block text-sm font-semibold text-gray-800 mb-1">Contact Number</label>
+                            <input type="tel" id="phone" placeholder="(123) 456-7890"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+        
+                        <div class="mt-4">
+                            <button type="submit"
+                                class="w-full py-3 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition duration-300">
+                                Submit Request
+                            </button>
+                        </div>
+        
+                        <p class="text-center text-xs text-gray-500 mt-3">
+                            We respect your privacy and will not share your information.
+                        </p>
+                    </form>
+                </div>
             </div>
         </section>
+        
         <!-- Blog Section End  -->
        
 
