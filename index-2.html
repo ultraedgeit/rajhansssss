@@ -46,6 +46,207 @@
 
     </head>
 
+    <!-- Popup Form -->
+    <!-- Centered Popup Form -->
+    <!-- Centered Popup Form -->
+<!-- Centered Popup Form -->
+<!-- Centered Popup Form -->
+<div class="form-popup" id="contactForm">
+    <form action="#" class="form-container">
+      <!-- Logo at the top center -->
+      <div class="logo-wrapper">
+        <img src="assets/images/logo/blossom_logo.jpg" alt="Blossom Logo" class="logo-top">
+        <!-- <img src="assets/images/logo/blossom_logo.jpg" alt="Blossom Logo" class="logo-top"> -->
+
+      </div>
+  
+      <div class="form-grid">
+        <!-- Left Side (Text Info) -->
+        <div class="form-info">
+          <h2>Get In Touch</h2>
+          <p>Fill the form and we’ll reach out shortly.</p>
+          <p class="privacy-text">We respect your privacy.</p>
+        </div>
+  
+        <!-- Right Side (Form Fields) -->
+        <div class="form-fields">
+          <input type="text" placeholder="Your Name" name="name" required>
+          <input type="email" placeholder="Your Email" name="email" required>
+          <textarea name="message" placeholder="Message..." rows="3" required></textarea>
+          <button type="submit" class="btn">Submit</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  
+  <style>
+    @media (max-width: 768px) {
+  .form-popup {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .form-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .form-info,
+  .form-fields {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .form-info h2 {
+    font-size: 18px;
+  }
+
+  .form-info p {
+    font-size: 14px;
+  }
+
+  .form-fields input,
+  .form-fields textarea {
+    font-size: 14px;
+  }
+
+  .form-fields .btn {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .logo-top {
+    max-width: 100px;
+    margin: 0 auto 10px;
+  }
+}
+
+    /* Top logo container */
+.logo-wrapper {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.logo-top {
+  max-width: 120px;
+  height: auto;
+}
+
+  .form-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background: linear-gradient(135deg, #f3f4f7, #d1e2f5);
+  border-radius: 15px;
+  padding: 20px 30px;
+  width: 650px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-grid {
+  display: flex;
+  align-items: center; /* vertical alignment */
+  gap: 30px;
+}
+
+.form-info {
+  width: 40%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.form-info h2 {
+  font-size: 20px;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.form-info p {
+  font-size: 14px;
+  color: #444;
+  margin: 4px 0;
+}
+
+.privacy-text {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.logo {
+  max-width: 100px;
+  margin-top: 10px;
+}
+
+.form-fields {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-fields input,
+.form-fields textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-fields .btn {
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-fields .btn {
+  background-color: #004aad;
+  color: white;
+}
+
+.form-fields .btn.cancel {
+  background-color: #777;
+}
+
+.form-fields .btn:hover {
+  opacity: 0.9;
+}
+
+  </style>
+  
+  <script>
+  window.onload = function () {
+    document.getElementById("contactForm").style.display = "block";
+  };
+  
+  function closeForm() {
+    document.getElementById("contactForm").style.display = "none";
+  }
+  </script>
+  
+  
+  
+  
+  
+
 
 <body class="font-karla text-body text-tiny">
     <div class="overflow-hidden">
@@ -73,7 +274,7 @@
                                     </li>
                                     <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                        <a href="#" class="transition-all hover:text-secondary">About</a>
+                                        <a href="#explore-cities" class="transition-all hover:text-secondary">About</a>
 
                                         <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap flex-col w-[220px] absolute top-[120%] left-1/2 -translate-x-1/2 transition-all
                                         group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100
@@ -84,7 +285,7 @@
                                     </li>
                                     <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                        <a href="#" class="transition-all hover:text-secondary">Properties</a>
+                                        <a href="#properties" class="transition-all hover:text-secondary">Floor Plans</a>
                                         <!-- <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap w-[890px] absolute top-[120%] left-1/2 translate-x-[-40%] xl:translate-x-[-45%] transition-all
                                             group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100 px-[40px] py-[45px]
                                             bg-contain bg-right-top bg-no-repeat
@@ -145,7 +346,7 @@
                                     <!-- </li> -->
                                     <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                        <a href="#" class="transition-all hover:text-secondary">Pages</a>
+                                        <a href="#ease-of-access" class="transition-all hover:text-secondary">Ease of Access</a>
                                         <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap flex-col w-[220px] absolute top-[120%] left-1/2 -translate-x-1/2 transition-all
                                          group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100">
 
@@ -167,7 +368,7 @@
 
                                         <a href="#" class="transition-all hover:text-secondary">Blog</a>
                                         <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap flex-col w-[220px] absolute top-[120%] left-1/2 -translate-x-1/2 transition-all
-                `                       group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100
+                                     group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100
             
             ">
                                             
@@ -441,7 +642,7 @@
 
 
         <!-- Explore Cities Start-->
-        <section class="explore-cities-section pt-[80px] pb-[120px] lg:py-[120px]">
+        <section id="explore-cities" class="explore-cities-section pt-[80px] pb-[120px] lg:py-[120px]">
             <div class="container">
                 <div class="grid grid-cols-12">
                     <div class="col-span-12">
@@ -673,8 +874,8 @@
         <!-- Blog Section Start  -->
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-<section x-data="{ open: false }" class="blog-section py-[80px] lg:py-[120px]">
-    <div class="container mx-auto px-4">
+        <section id="properties" x-data="{ open: false }" class="blog-section py-[80px] lg:py-[120px]">
+            <div class="container mx-auto px-4">
         <div class="mb-[30px] lg:mb-[60px] text-center">
             <h2 class="font-lora text-primary text-[24px] sm:text-[30px] xl:text-xl capitalize font-medium">
                 Floor Plans <span class="text-secondary"></span>
@@ -962,9 +1163,9 @@
         <body>
             <div class="container">
                 <!-- Page 1 -->
-                <div class="header">
-                    <h1>WITHIN TOUCHING DISTANCE</h1>
-                    <p class="subtitle">Exclusive property in prime location with convenient access to essential amenities</p>
+                <div id="ease-of-access" class="container">
+                    <!-- <h1>WITHIN TOUCHING DISTANCE</h1>
+                    <p class="subtitle">Exclusive property in prime location with convenient access to essential amenities</p> -->
                 </div>
                 
                 <div class="amenities-section">
@@ -1186,7 +1387,7 @@
                         </div>
                         <div class="col-span-12 lg:col-span-5 mb-[30px] order-last lg:order-none">
                             <div class="h-[385px] rounded-[6px] overflow-hidden xl:ml-[40px]">
-                                <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4814229.011985735!2d-65.89121968758322!3d-7.7486900084225026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e8605342744385%3A0x3d3c6dc1394a7fc7!2sAmazon%20Rainforest!5e0!3m2!1sen!2sbd!4v1644813708270!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                <!-- <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4814229.011985735!2d-65.89121968758322!3d-7.7486900084225026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e8605342744385%3A0x3d3c6dc1394a7fc7!2sAmazon%20Rainforest!5e0!3m2!1sen!2sbd!4v1644813708270!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
                             </div>
                         </div>
                         <div class="col-span-12 mb-[30px] lg:mb-0  order-2 lg:order-none">
@@ -1219,7 +1420,7 @@
                         <img class="self-center mr-[20px] sm:mr-[40px] lg:mr-[20px] xl:mr-[40px] sm:mb-[15px] lg:mb-0" src="assets/images/icon/phone.png" width="46" height="46" loading="lazy" alt="image icon">
                         <div class="flex-1">
                             <h4 class="font-lora group-hover:text-secondary group-hover:transition-all leading-none text-[28px] text-primary mb-[10px]">Call us <span class="text-secondary">.</span></h4>
-                            <p class="font-light text-[18px] lg:max-w-[230px]">MOONSTONE, Rajhans Dreams, Behind Bishop's House, Barampur,Vasai(W)-401202<br><br>
+                            <p class="font-light text-[18px] lg:max-w-[230px]">+91 77699 00500<br><br>
 
                                 Maharera : P99000018357</p>
                         </div>
@@ -1250,7 +1451,7 @@
             <div class="grid grid-cols-12 gap-x-[30px] mb-[-30px]">
                 <div class="col-span-12 sm:col-span-6 lg:col-span-4 mb-[30px]">
                     <a href="index.html" class="block mb-[25px]">
-                        <img src="assets/images/logo/" width="99" height="46" loading=lazy alt="footer logo">
+                        <img src="assets/images/logo/b" width="99" height="46" loading=lazy alt="footer logo">
                     </a>
                   
                     <p class="text-sm hidden md:block">&copy; <a href="#" class="text-secondary">UltraEdgeIT Soltuions.</a> All Rights Reserved - Privacy Policy</p>
